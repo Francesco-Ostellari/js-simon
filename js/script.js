@@ -47,7 +47,7 @@ setTimeout(function () {
         numbersUser.push(numberUser);
   
         //se il numero scritto dall'utente è presente nell'array random iniziale, allora il contatore cresce
-        if (numbers.includes(numberUser)) {
+        if (numbers.includes(numberUser) && !numeriCorretti.includes(numberUser) ) {
           contatore += 1;
           numeriCorretti.push(numberUser);
         }  
@@ -81,6 +81,6 @@ setTimeout(function () {
       }
       
     }, 100);
-  }, 30000);
+  }, 3000);
 
 }, 5000);
