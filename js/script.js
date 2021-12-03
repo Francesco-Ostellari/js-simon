@@ -42,7 +42,11 @@ setTimeout(function () {
   
       for (let index = 0; index < numbers.length; index++) {
         let numberUser = parseInt(prompt(`Dovrai inserire i 5 numeri random che hai memorizzato. Inserisci il ${index + 1}°`));
-  
+      
+        // controllo se è un numero o una stringa
+        while (isNaN(numberUser)) {
+          number = parseInt(prompt(`Dovrai inserire i 5 numeri random che hai memorizzato. Inserisci il ${index + 1}°`));
+        }
         // //pusho i numeri nell'array
         numbersUser.push(numberUser);
   
